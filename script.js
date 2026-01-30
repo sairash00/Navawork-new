@@ -1,7 +1,6 @@
 (function () {
-  
-// TODO: Replace 'YOUR_PUBLIC_KEY' with your actual EmailJS Public Key
-  emailjs.init("YOUR_PUBLIC_KEY");
+  // TODO: Replace 'YOUR_PUBLIC_KEY' with your actual EmailJS Public Key
+  emailjs.init("TZcvdSeVZzNM2olgI");
 })();
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -17,16 +16,24 @@ document.addEventListener("DOMContentLoaded", () => {
       submitButton.disabled = true;
       submitButton.textContent = "Sending...";
 
-      // Generate a five-digit unique ID
-      // const contactNumber = Math.random() * 100000 | 0;
-      // this.contact_number.value = contactNumber; // Ensure you have a hidden input with name='contact_number' if you use this
+      // Extract form data
+      const formData = {
+        from_name: contactForm.querySelector('input[name="from_name"]').value,
+        reply_to: contactForm.querySelector('input[name="reply_to"]').value,
+        phone_number: contactForm.querySelector('input[name="phone_number"]')
+          .value,
+        inquiry_type: contactForm.querySelector('select[name="inquiry_type"]')
+          .value,
+        message: contactForm.querySelector('textarea[name="message"]').value,
+      };
 
       // TODO: Replace 'YOUR_SERVICE_ID' and 'YOUR_TEMPLATE_ID' with actual values
-      const serviceID = "YOUR_SERVICE_ID";
-      const templateID = "YOUR_TEMPLATE_ID";
+      const serviceID = "service_s1vue0z";
+      const templateID = "template_crvg0l8";
 
+      console.log(formData);
       emailjs
-        .sendForm(serviceID, templateID, this)
+        .send(serviceID, templateID, formData)
         .then(
           () => {
             alert("Thank you! Your inquiry has been sent successfully.");
