@@ -3,12 +3,43 @@
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>NavaWorks</title>
-    <link
-      rel="icon"
-      href="./assets/navaworkslogowhite.svg"
-      type="image/x-icon"
-    />
+    
+    <!-- Primary Meta Tags -->
+    <title>NavaWorks - Full-Service Digital Lab | Web Development & Design in Nepal</title>
+    <meta name="title" content="NavaWorks - Full-Service Digital Lab | Web Development & Design in Nepal" />
+    <meta name="description" content="Student-led digital agency delivering enterprise-grade web solutions, custom management software, and graphics design. Bridging human intuition with technical excellence for local businesses in Nepal." />
+    <meta name="keywords" content="web development Nepal, digital agency Nepal, website design, management software, graphics design, React development, student developers, NavaWorks" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="English" />
+    <meta name="author" content="NavaWorks" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://navaworks.com/" />
+    <meta property="og:title" content="NavaWorks - Full-Service Digital Lab | Web Development & Design" />
+    <meta property="og:description" content="Student-led digital agency delivering enterprise-grade web solutions for local businesses. Crafting digital legacies with modern tech." />
+    <meta property="og:image" content="https://res.cloudinary.com/justpractice/image/upload/v1770105523/coding_rmplwk.jpg" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://navaworks.com/" />
+    <meta property="twitter:title" content="NavaWorks - Full-Service Digital Lab | Web Development & Design" />
+    <meta property="twitter:description" content="Student-led digital agency delivering enterprise-grade web solutions for local businesses. Crafting digital legacies with modern tech." />
+    <meta property="twitter:image" content="https://res.cloudinary.com/justpractice/image/upload/v1770105523/coding_rmplwk.jpg" />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://navaworks.com/" />
+    
+    <!-- Favicon -->
+    <link rel="icon" href="./assets/navaworkslogowhite.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./assets/navaworkslogowhite.svg" />
+    
+    <!-- Preconnect to external domains for performance -->
+    <link rel="preconnect" href="https://cdn.tailwindcss.com" />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
     <link href="./style.css" />
 
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -27,6 +58,50 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
       rel="stylesheet"
     />
+    
+    <!-- Structured Data / Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "NavaWorks",
+      "url": "https://navaworks.com",
+      "logo": "https://navaworks.com/assets/navaworkslogo.svg",
+      "description": "Student-led digital agency delivering enterprise-grade web solutions, custom management software, and graphics design for local businesses in Nepal.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "NP"
+      },
+      "sameAs": [
+        "https://www.instagram.com/navaworks1/"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Service",
+        "availableLanguage": ["English", "Nepali"]
+      }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "NavaWorks",
+      "image": "https://navaworks.com/assets/navaworkslogo.svg",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "NP"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "reviewCount": "1"
+      }
+    }
+    </script>
+    
     <script id="tailwind-config">
       tailwind.config = {
         darkMode: "class",
@@ -75,6 +150,85 @@
           "GRAD" 0,
           "opsz" 24;
       }
+      
+      /* Mobile Menu Styles */
+      .mobile-menu {
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+      }
+      
+      .mobile-menu.active {
+        transform: translateX(0);
+      }
+      
+      /* Hamburger Animation */
+      .hamburger span {
+        transition: all 0.3s ease-in-out;
+      }
+      
+      .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+      }
+      
+      .hamburger.active span:nth-child(2) {
+        opacity: 0;
+      }
+      
+      .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+      }
+      
+      /* Hero Section Animations */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      
+      @keyframes fadeInRight {
+        from {
+          opacity: 0;
+          transform: translateX(-30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+      
+      @keyframes floatImage {
+        0%, 100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+      
+      .hero-badge {
+        animation: fadeInUp 0.6s ease-out 0.2s both;
+      }
+      
+      .hero-title {
+        animation: fadeInUp 0.6s ease-out 0.4s both;
+      }
+      
+      .hero-description {
+        animation: fadeInUp 0.6s ease-out 0.6s both;
+      }
+      
+      .hero-cta {
+        animation: fadeInUp 0.6s ease-out 0.8s both;
+      }
+      
+      .hero-image {
+        animation: fadeInRight 0.8s ease-out 0.6s both, floatImage 3s ease-in-out 1.4s infinite;
+      }
     </style>
   </head>
   <body>
@@ -85,12 +239,12 @@
         class="max-w-[1280px] mx-auto flex items-center justify-between px-8 py-3"
       >
         <div class="flex items-center gap-2">
-          <img alt="logo" src="./assets/navaworkslogo.svg" />
-          <a href="#" class="text-xl font-bold">
+          <img alt="NavaWorks Logo" src="./assets/navaworkslogo.svg" width="40" height="40" />
+          <a href="#" class="text-xl font-bold" aria-label="NavaWorks Home">
             <span class="text-primary">Nava</span>Works
           </a>
         </div>
-        <nav class="hidden md:flex items-center gap-12">
+        <nav class="hidden md:flex items-center gap-12" aria-label="Main navigation">
           <a
             class="text-md font-bold hover:text-primary transition-colors"
             href="#process"
@@ -116,11 +270,56 @@
           <a href="#contact"
             ><button
               class="bg-primary text-white px-6 py-2.5 rounded-custom text-sm font-bold hover:shadow-lg hover:shadow-primary/20 transition-all"
+              aria-label="Start your project with NavaWorks"
             >
               Start Project
             </button></a
           >
         </div>
+        
+        <!-- Mobile Hamburger Menu Button -->
+        <button 
+          class="md:hidden hamburger flex flex-col gap-1.5 w-8 h-8 justify-center items-center z-50"
+          aria-label="Toggle mobile menu"
+          id="hamburger-btn"
+        >
+          <span class="block w-6 h-0.5 bg-charcoal"></span>
+          <span class="block w-6 h-0.5 bg-charcoal"></span>
+          <span class="block w-6 h-0.5 bg-charcoal"></span>
+        </button>
+      </div>
+      
+      <!-- Mobile Menu -->
+      <div class="mobile-menu md:hidden fixed top-0 right-0 h-screen w-64 bg-cream shadow-2xl" id="mobile-menu">
+        <nav class="flex flex-col gap-8 p-8 mt-16" aria-label="Mobile navigation">
+          <a
+            class="text-lg font-bold hover:text-primary transition-colors mobile-menu-link"
+            href="#process"
+            >Process</a
+          >
+          <a
+            class="text-lg font-bold hover:text-primary transition-colors mobile-menu-link"
+            href="#services"
+            >Services</a
+          >
+          <a
+            class="text-lg font-bold hover:text-primary transition-colors mobile-menu-link"
+            href="#team"
+            >Team</a
+          >
+          <a
+            class="text-lg font-bold hover:text-primary transition-colors mobile-menu-link"
+            href="#contact"
+            >Contact</a
+          >
+          <a href="#contact" class="mobile-menu-link">
+            <button
+              class="bg-primary text-white px-6 py-2.5 rounded-custom text-sm font-bold hover:shadow-lg hover:shadow-primary/20 transition-all w-full"
+            >
+              Start Project
+            </button>
+          </a>
+        </nav>
       </div>
     </header>
 
@@ -129,44 +328,45 @@
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
           <div class="lg:col-span-7 space-y-8 text-center lg:text-left">
             <span
-              class="inline-block text-primary font-extrabold text-xs uppercase tracking-[0.3em] bg-primary/5 px-3 py-1 rounded-full border border-primary/10"
+              class="inline-block text-primary font-extrabold text-xs uppercase tracking-[0.3em] bg-primary/5 px-3 py-1 rounded-full border border-primary/10 hero-badge"
               >Full-Service Digital Lab</span
             >
             <h1
-              class="text-6xl md:text-8xl font-bold tracking-tight leading-[0.95] text-charcoal"
+              class="text-6xl md:text-8xl font-bold tracking-tight leading-[0.95] text-charcoal hero-title"
             >
               Crafting <br />
               digital <br />
               legacies.
             </h1>
-            <p class="text-xl text-charcoal/70 max-w-xl leading-relaxed">
+            <p class="text-xl text-charcoal/70 max-w-xl leading-relaxed hero-description">
               We bridge the gap between human intuition and technical
               excellence. A student-led collective delivering enterprise-grade
               web solutions for local pioneers.
             </p>
             <div
-              class="flex flex-wrap gap-4 pt-4 justify-center lg:justify-start"
+              class="flex flex-wrap gap-4 pt-4 justify-center lg:justify-start hero-cta"
             >
               <a href="#process"
                 ><button
                   class="bg-charcoal text-white px-10 py-4 rounded-custom text-lg font-bold hover:bg-primary transition-all duration-300 shadow-xl shadow-charcoal/10"
+                  aria-label="Learn about our process"
                 >
                   Our Process
                 </button></a
               >
-              <!-- <button class="bg-white border border-primary/20 text-primary px-10 py-4 rounded-custom text-lg font-bold hover:bg-primary/5 transition-all">
-                        Our Services
-                    </button> -->
             </div>
           </div>
           <div class="lg:col-span-5 hidden lg:block">
             <div
-              class="rounded-custom overflow-hidden aspect-[4/5] shadow-2xl border border-primary/10"
+              class="rounded-custom overflow-hidden aspect-[4/5] shadow-2xl border border-primary/10 hero-image"
             >
               <img
-                alt="workspace"
+                alt="Developer workspace showing coding environment"
                 class="w-full h-full object-cover"
                 src="https://res.cloudinary.com/justpractice/image/upload/v1770105523/coding_rmplwk.jpg"
+                loading="lazy"
+                width="600"
+                height="750"
               />
             </div>
           </div>
@@ -188,7 +388,7 @@
                 aesthetics.
               </p>
             </div>
-            <div class="hidden md:block pb-2">
+            <div class="hidden md:block pb-2" aria-hidden="true">
               <div class="flex gap-2">
                 <div class="w-12 h-1 bg-primary rounded-full"></div>
                 <div class="w-4 h-1 bg-primary/20 rounded-full"></div>
@@ -197,7 +397,7 @@
             </div>
           </div>
           <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div
+            <article
               class="p-6 md:p-10 rounded-custom card-depth relative overflow-hidden group"
             >
               <div
@@ -205,6 +405,8 @@
                 style="
                   background-image: url(&quot;https://res.cloudinary.com/justpractice/image/upload/v1770105523/website_development_rozico.gif&quot;);
                 "
+                role="img"
+                aria-label="Website development animation"
               ></div>
               <div
                 class="absolute inset-0 bg-black/70 group-hover:bg-black/80 transition-colors duration-300"
@@ -213,7 +415,7 @@
                 <div
                   class="w-14 h-14 bg-white/10 rounded-custom flex items-center justify-center mb-8 border border-white/20 backdrop-blur-sm"
                 >
-                  <span class="material-symbols-outlined text-4xl text-white"
+                  <span class="material-symbols-outlined text-4xl text-white" aria-hidden="true"
                     >code</span
                   >
                 </div>
@@ -222,14 +424,9 @@
                   Crafting responsive, high-performance websites that serve as
                   the digital storefront for your brand.
                 </p>
-                <!-- <ul class="space-y-3 text-sm font-semibold text-white/90">
-<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary/20 bg-white"></span> Custom Reservation Flows</li>
-<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary/20 bg-white"></span> Contactless Menu Management</li>
-<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary/20 bg-white"></span> Loyalty Program Engineering</li>
-</ul> -->
               </div>
-            </div>
-            <div
+            </article>
+            <article
               class="p-10 rounded-custom card-depth relative overflow-hidden group"
             >
               <div
@@ -237,6 +434,8 @@
                 style="
                   background-image: url(&quot;./assets/management_software.png&quot;);
                 "
+                role="img"
+                aria-label="Management software interface"
               ></div>
               <div
                 class="absolute inset-0 bg-black/70 group-hover:bg-black/80 transition-colors duration-300"
@@ -245,7 +444,7 @@
                 <div
                   class="w-14 h-14 bg-white/10 rounded-custom flex items-center justify-center mb-8 border border-white/20 backdrop-blur-sm"
                 >
-                  <span class="material-symbols-outlined text-4xl text-white"
+                  <span class="material-symbols-outlined text-4xl text-white" aria-hidden="true"
                     >settings_suggest</span
                   >
                 </div>
@@ -256,14 +455,9 @@
                   Building custom software solutions to streamline operations,
                   manage resources, and boost efficiency.
                 </p>
-                <!-- <ul class="space-y-3 text-sm font-semibold text-white/90">
-<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary/20 bg-white"></span> Comprehensive Style Guides</li>
-<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary/20 bg-white"></span> User-Centric UX Design</li>
-<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary/20 bg-white"></span> Motion & Interactive Graphics</li>
-</ul> -->
               </div>
-            </div>
-            <div
+            </article>
+            <article
               class="p-10 rounded-custom card-depth relative overflow-hidden group"
             >
               <div
@@ -271,6 +465,8 @@
                 style="
                   background-image: url(&quot;https://res.cloudinary.com/justpractice/image/upload/v1770105524/graphics_designing_yed1nr.gif&quot;);
                 "
+                role="img"
+                aria-label="Graphics design animation"
               ></div>
               <div
                 class="absolute inset-0 bg-black/60 group-hover:bg-black/70 transition-colors duration-300"
@@ -279,7 +475,7 @@
                 <div
                   class="w-14 h-14 bg-white/10 rounded-custom flex items-center justify-center mb-8 border border-white/20 backdrop-blur-sm"
                 >
-                  <span class="material-symbols-outlined text-4xl text-white"
+                  <span class="material-symbols-outlined text-4xl text-white" aria-hidden="true"
                     >brush</span
                   >
                 </div>
@@ -288,24 +484,20 @@
                   Creating visually stunning graphics that capture your brand's
                   essence and communicate your message effectively.
                 </p>
-                <!-- <ul class="space-y-3 text-sm font-semibold text-white/90">
-<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary/20 bg-white"></span> Local Search Dominance</li>
-<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary/20 bg-white"></span> Conversion Rate Optimization</li>
-<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-primary/20 bg-white"></span> Social Data Integration</li>
-</ul> -->
               </div>
-            </div>
+            </article>
           </div>
         </div>
       </section>
       <section class="py-20 section-divider">
         <div class="max-w-[1280px] mx-auto px-8">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-            <div
+            <blockquote
               class="bg-primary text-white p-8 md:p-16 rounded-custom shadow-2xl relative overflow-hidden group"
             >
               <div
                 class="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -mr-32 -mt-32 blur-3xl group-hover:bg-white/10 transition-colors"
+                aria-hidden="true"
               ></div>
               <p
                 class="text-2xl md:text-4xl font-light italic leading-snug mb-10 relative z-10"
@@ -314,9 +506,10 @@
                 user-friendly. It has streamlined our entire workflow and made
                 tracking inventory effortless."
               </p>
-              <div class="relative z-10 flex items-center gap-4">
+              <footer class="relative z-10 flex items-center gap-4">
                 <div
                   class="w-12 h-12 rounded-full border border-white/20 bg-white/10 flex items-center justify-center font-bold"
+                  aria-hidden="true"
                 >
                   GN
                 </div>
@@ -326,8 +519,8 @@
                     Founder, Neupane Suppliers
                   </p>
                 </div>
-              </div>
-            </div>
+              </footer>
+            </blockquote>
             <div class="space-y-12 text-center md:text-left md:pl-12">
               <h2 class="text-5xl font-bold tracking-tight leading-tight">
                 Trusted by local icons.
@@ -373,7 +566,7 @@
                 workflow ensures clarity, quality, and speed from day one.
               </p>
             </div>
-            <div class="hidden md:block pb-2">
+            <div class="hidden md:block pb-2" aria-hidden="true">
               <div class="flex gap-2">
                 <div class="w-4 h-1 bg-primary/20 rounded-full"></div>
                 <div class="w-12 h-1 bg-primary rounded-full"></div>
@@ -398,19 +591,19 @@
           </style>
 
           <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-            <!-- Step 1 -->
-            <div
+            <article
               class="p-6 md:p-8 rounded-custom card-depth bg-white relative overflow-hidden group hover-corners-in transition-all duration-300 z-0"
             >
               <div
                 class="absolute -right-4 -top-4 text-[8rem] font-bold text-primary/20 select-none leading-none group-hover:text-white/5 transition-colors duration-500"
+                aria-hidden="true"
               >
                 01
               </div>
               <div
                 class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center mb-6 text-white group-hover:bg-white/10 group-hover:text-white transition-colors duration-300 relative z-10"
               >
-                <span class="material-symbols-outlined">lightbulb</span>
+                <span class="material-symbols-outlined" aria-hidden="true">lightbulb</span>
               </div>
               <h3
                 class="text-xl font-bold mb-3 relative z-10 group-hover:text-white transition-colors duration-300"
@@ -423,21 +616,21 @@
                 We dive deep into your vision, understanding your goals and
                 technical requirements to build a solid roadmap.
               </p>
-            </div>
+            </article>
 
-            <!-- Step 2 -->
-            <div
+            <article
               class="p-6 md:p-8 rounded-custom card-depth bg-white relative overflow-hidden group hover-corners-in transition-all duration-300 z-0"
             >
               <div
                 class="absolute -right-4 -top-4 text-[8rem] font-bold text-primary/20 select-none leading-none group-hover:text-white/5 transition-colors duration-500"
+                aria-hidden="true"
               >
                 02
               </div>
               <div
                 class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center mb-6 text-white group-hover:bg-white/10 group-hover:text-white transition-colors duration-300 relative z-10"
               >
-                <span class="material-symbols-outlined">design_services</span>
+                <span class="material-symbols-outlined" aria-hidden="true">design_services</span>
               </div>
               <h3
                 class="text-xl font-bold mb-3 relative z-10 group-hover:text-white transition-colors duration-300"
@@ -450,21 +643,21 @@
                 We create intuitive, high-fidelity prototypes that visualize the
                 solution before a single line of code is written.
               </p>
-            </div>
+            </article>
 
-            <!-- Step 3 -->
-            <div
+            <article
               class="p-6 md:p-8 rounded-custom card-depth bg-white relative overflow-hidden group hover-corners-in transition-all duration-300 z-0"
             >
               <div
                 class="absolute -right-4 -top-4 text-[8rem] font-bold text-primary/20 select-none leading-none group-hover:text-white/5 transition-colors duration-500"
+                aria-hidden="true"
               >
                 03
               </div>
               <div
                 class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center mb-6 text-white group-hover:bg-white/10 group-hover:text-white transition-colors duration-300 relative z-10"
               >
-                <span class="material-symbols-outlined">terminal</span>
+                <span class="material-symbols-outlined" aria-hidden="true">terminal</span>
               </div>
               <h3
                 class="text-xl font-bold mb-3 relative z-10 group-hover:text-white transition-colors duration-300"
@@ -477,21 +670,21 @@
                 Our engineers build with clean, scalable code, ensuring your
                 product is fast, secure, and ready for growth.
               </p>
-            </div>
+            </article>
 
-            <!-- Step 4 -->
-            <div
+            <article
               class="p-6 md:p-8 rounded-custom card-depth bg-white relative overflow-hidden group hover-corners-in transition-all duration-300 z-0"
             >
               <div
                 class="absolute -right-4 -top-4 text-[8rem] font-bold text-primary/20 select-none leading-none group-hover:text-white/5 transition-colors duration-500"
+                aria-hidden="true"
               >
                 04
               </div>
               <div
                 class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center mb-6 text-white group-hover:bg-white/10 group-hover:text-white transition-colors duration-300 relative z-10"
               >
-                <span class="material-symbols-outlined">rocket_launch</span>
+                <span class="material-symbols-outlined" aria-hidden="true">rocket_launch</span>
               </div>
               <h3
                 class="text-xl font-bold mb-3 relative z-10 group-hover:text-white transition-colors duration-300"
@@ -504,7 +697,7 @@
                 We handle deployment, final testing, and handoff, ensuring a
                 smooth launch and long-term reliability.
               </p>
-            </div>
+            </article>
           </div>
         </div>
       </section>
@@ -531,10 +724,13 @@
             <a
               href="https://react.dev/"
               target="_blank"
+              rel="noopener noreferrer"
               class="flex flex-col items-center gap-3 group"
+              aria-label="React.js - JavaScript library for building user interfaces"
             >
               <i
                 class="devicon-react-original colored text-5xl grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-300"
+                aria-hidden="true"
               ></i>
               <span class="font-semibold text-sm text-charcoal/80"
                 >React.js</span
@@ -543,20 +739,26 @@
             <a
               href="https://www.figma.com/"
               target="_blank"
+              rel="noopener noreferrer"
               class="flex flex-col items-center gap-3 group"
+              aria-label="Figma - Collaborative design tool"
             >
               <i
                 class="devicon-figma-plain colored text-5xl grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-300"
+                aria-hidden="true"
               ></i>
               <span class="font-semibold text-sm text-charcoal/80">Figma</span>
             </a>
             <a
               href="https://www.postgresql.org/"
               target="_blank"
+              rel="noopener noreferrer"
               class="flex flex-col items-center gap-3 group"
+              aria-label="PostgreSQL - Open source relational database"
             >
               <i
                 class="devicon-postgresql-plain colored text-5xl grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-300"
+                aria-hidden="true"
               ></i>
               <span class="font-semibold text-sm text-charcoal/80"
                 >PostgreSQL</span
@@ -565,10 +767,13 @@
             <a
               href="https://www.mongodb.com/"
               target="_blank"
+              rel="noopener noreferrer"
               class="flex flex-col items-center gap-3 group"
+              aria-label="MongoDB - NoSQL database"
             >
               <i
                 class="devicon-mongodb-plain colored text-5xl grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-300"
+                aria-hidden="true"
               ></i>
               <span class="font-semibold text-sm text-charcoal/80"
                 >MongoDB</span
@@ -577,10 +782,13 @@
             <a
               href="https://nodejs.org/"
               target="_blank"
+              rel="noopener noreferrer"
               class="flex flex-col items-center gap-3 group"
+              aria-label="Node.js - JavaScript runtime"
             >
               <i
                 class="devicon-nodejs-plain colored text-5xl grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-300"
+                aria-hidden="true"
               ></i>
               <span class="font-semibold text-sm text-charcoal/80"
                 >Node.js</span
@@ -589,10 +797,13 @@
             <a
               href="https://expressjs.com/"
               target="_blank"
+              rel="noopener noreferrer"
               class="flex flex-col items-center gap-3 group"
+              aria-label="Express.js - Web framework for Node.js"
             >
               <i
                 class="devicon-express-original colored text-5xl grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-300"
+                aria-hidden="true"
               ></i>
               <span class="font-semibold text-sm text-charcoal/80"
                 >Express.js</span
@@ -616,25 +827,29 @@
             <a
               href="https://sairashkhatiwada.com.np"
               target="_blank"
+              rel="noopener noreferrer"
               class="block group"
             >
-              <div
+              <article
                 class="p-10 rounded-custom card-depth h-full flex flex-col items-center hover:-translate-y-2 transition-transform duration-500 bg-white"
               >
                 <div
                   class="w-32 h-32 rounded-full mb-8 overflow-hidden border-4 border-white shadow-xl ring-4 ring-primary/5 group-hover:ring-primary/20 transition-all"
                 >
                   <img
-                    alt="Sairash Khatiwada"
+                    alt="Sairash Khatiwada - Full Stack Developer at NavaWorks"
                     class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
                     src="./assets/sairash_profile.png"
+                    loading="lazy"
+                    width="128"
+                    height="128"
                   />
                 </div>
-                <h4
+                <h3
                   class="font-bold text-2xl mb-2 text-charcoal group-hover:text-primary transition-colors"
                 >
                   Sairash Khatiwada
-                </h4>
+                </h3>
                 <p
                   class="text-xs font-black text-primary/80 uppercase tracking-[0.2em] mb-6 border border-primary/10 px-3 py-1 rounded-full"
                 >
@@ -644,30 +859,34 @@
                   Architecting the full digital lifecycle. Blending technical
                   depth with creative vision.
                 </p>
-              </div>
+              </article>
             </a>
             <a
               href="https://pralhadneupane.com.np"
               target="_blank"
+              rel="noopener noreferrer"
               class="block group"
             >
-              <div
+              <article
                 class="p-10 rounded-custom card-depth h-full flex flex-col items-center hover:-translate-y-2 transition-transform duration-500 bg-white"
               >
                 <div
                   class="w-32 h-32 rounded-full mb-8 overflow-hidden border-4 border-white shadow-xl ring-4 ring-primary/5 group-hover:ring-primary/20 transition-all"
                 >
                   <img
-                    alt="Pralhad Neupane"
+                    alt="Pralhad Neupane - Front End Developer at NavaWorks"
                     class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
                     src="./assets/pralhad_profile.png"
+                    loading="lazy"
+                    width="128"
+                    height="128"
                   />
                 </div>
-                <h4
+                <h3
                   class="font-bold text-2xl mb-2 text-charcoal group-hover:text-primary transition-colors"
                 >
                   Pralhad Neupane
-                </h4>
+                </h3>
                 <p
                   class="text-xs font-black text-primary/80 uppercase tracking-[0.2em] mb-6 border border-primary/10 px-3 py-1 rounded-full"
                 >
@@ -677,30 +896,34 @@
                   Crafting pixel-perfect, interactive user experiences that
                   bring designs to life.
                 </p>
-              </div>
+              </article>
             </a>
             <a
               href="https://sujaldhungana.com.np"
               target="_blank"
+              rel="noopener noreferrer"
               class="block group"
             >
-              <div
+              <article
                 class="p-10 rounded-custom card-depth h-full flex flex-col items-center hover:-translate-y-2 transition-transform duration-500 bg-white"
               >
                 <div
                   class="w-32 h-32 rounded-full mb-8 overflow-hidden border-4 border-white shadow-xl ring-4 ring-primary/5 group-hover:ring-primary/20 transition-all"
                 >
                   <img
-                    alt="Sujal Dhungana"
+                    alt="Sujal Dhungana - Quality Assurance at NavaWorks"
                     class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
                     src="./assets/sujal_profile.png"
+                    loading="lazy"
+                    width="128"
+                    height="128"
                   />
                 </div>
-                <h4
+                <h3
                   class="font-bold text-2xl mb-2 text-charcoal group-hover:text-primary transition-colors"
                 >
                   Sujal Dhungana
-                </h4>
+                </h3>
                 <p
                   class="text-xs font-black text-primary/80 uppercase tracking-[0.2em] mb-6 border border-primary/10 px-3 py-1 rounded-full"
                 >
@@ -710,62 +933,12 @@
                   Ensuring flawless performance and reliability across every
                   deployment.
                 </p>
-              </div>
+              </article>
             </a>
           </div>
         </div>
       </section>
 
-      <!-- NOTE: insights section can add but no use for now -->
-
-      <!-- <section class="py-20 section-divider" id="insights">
-<div class="max-w-[1280px] mx-auto px-8">
-<div class="flex justify-between items-end mb-16">
-<div>
-<h2 class="text-4xl font-bold tracking-tight mb-4">Latest Insights</h2>
-<p class="text-charcoal/60">Thoughts on design, technology, and the future of hospitality.</p>
-</div>
- <a class="text-primary font-bold hover:text-charcoal transition-colors border-b border-primary/20 pb-1" href="#">Read Journal</a>
-
-
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-<div class="rounded-custom card-depth overflow-hidden group">
-<div class="h-56 overflow-hidden">
-<img alt="Blog post thumb" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCF1Lab1DiGDyjVMoF_LNdv6T_R2Cfxxd-wWxSzuK3y69JollDdEl99IJBnLOZ2QZ6OLgWbLoe5OFZIT5qCzkE-AW1cepQvgv-3aaOoSbG1Qsg8I4kA7qL5-erAekhw7Y3ImuVCZFxNsI_-u2bGeFPcDpHC0h0LhqIbJEzQC5opKbbcytwHk0tb_jrDB6_HA5hyQXh_GEb756JnInLRnWZnJ8oPq3tcMMQNjEq6q9D4BdPPixWpJfIFBHTgIUhtFH-XotISboLI"/>
-</div>
-<div class="p-8">
-<span class="text-[10px] font-black tracking-widest text-primary uppercase">Design Philosophy</span>
-<h4 class="text-xl font-bold mt-3 mb-4 leading-tight">The Psychology of Minimalist Digital Menus</h4>
-<p class="text-charcoal/60 text-sm mb-6">How reducing cognitive load increases guest satisfaction and higher average check values.</p>
-<span class="text-xs font-bold text-charcoal/40">5 MIN READ</span>
-</div>
-</div>
-<div class="rounded-custom card-depth overflow-hidden group">
-<div class="h-56 overflow-hidden">
-<img alt="Blog post thumb" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAap6MpmdkqCkWlSMWBlBnMy9f7k9jjwS4pDqPN3dZYzERsiZTH9gUEFY2QZCopAaOOxanQLKA-HMHjLOudprjqh0NuShQW7zIyOOvxEDBAYrRfcABe__BxyTTxIh6_R1uUuOqRc4-tD46_QuOe-tN7Ix9FglUz1N9fh1KtxBXGvorkHXEtErSrYqNQlnFzzYRThXIuXffJLZBqaieA_o0pMJ2Z45SHHKjOWaYf893oJfGz4tV4z3I-9T0EHZdcdNh_DzvCv0Qc"/>
-</div>
-<div class="p-8">
-<span class="text-[10px] font-black tracking-widest text-primary uppercase">Technology</span>
-<h4 class="text-xl font-bold mt-3 mb-4 leading-tight">Transitioning to Contactless without Losing Soul</h4>
-<p class="text-charcoal/60 text-sm mb-6">Preserving the human element in restaurant service while embracing modern technical efficiencies.</p>
-<span class="text-xs font-bold text-charcoal/40">8 MIN READ</span>
-</div>
-</div>
-<div class="rounded-custom card-depth overflow-hidden group">
-<div class="h-56 overflow-hidden">
-<img alt="Blog post thumb" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhnxPtugL6zAABpNzDmucWkfbSu6EGpyzEUNlnrr1tRRLuP82UvjP0eWbvn7EveCWsNEIf8tsnalQkGsO5lho3zKS4PThVaXEPvkZ2WrdUBupHpOP-L3MWgWDEUBEsw6MPfZ-KdAn9Pw47uZhbnGy5mZLXZf1OArb_UEXA49hn4ueTiDqRyiVTeHRmuJVkK-BascKkPJRSadd5oITUm87s_ga80gOm95KraPmoCk_RaZ23BbbLtAHcFVoFSGoafzMCoD8TY0ay"/>
-</div>
-<div class="p-8">
-<span class="text-[10px] font-black tracking-widest text-primary uppercase">Strategy</span>
-<h4 class="text-xl font-bold mt-3 mb-4 leading-tight">Beyond SEO: Building Local Community Online</h4>
-<p class="text-charcoal/60 text-sm mb-6">Why your social presence and web experience must be a seamless extension of your physical store.</p>
-<span class="text-xs font-bold text-charcoal/40">6 MIN READ</span>
-</div>
-</div>
-</div>
-</div>
-</section> -->
       <section
         class="py-20 bg-charcoal text-cream rounded-t-[40px] border-t-4 border-primary"
         id="contact"
@@ -793,92 +966,107 @@
                       class="text-lg hover:text-primary transition-colors font-medium"
                       href="https://www.instagram.com/navaworks1/"
                       target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Visit NavaWorks Instagram"
                     >
                       <i
                         class="fa-brands fa-instagram fa-xl"
                         style="color: #ffffff"
+                        aria-hidden="true"
                       ></i>
                     </a>
-                    <!-- <a class="text-lg hover:text-primary transition-colors font-medium" href="#" target="_blank" >LinkedIn</a> -->
                     <a
                       class="text-lg hover:text-primary transition-colors font-medium"
                       href="https://mail.google.com/mail/u/5/#inbox?compose=new"
                       target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Send email to NavaWorks"
                       ><i
                         class="fa-solid fa-envelope fa-xl"
                         style="color: #ffffff"
+                        aria-hidden="true"
                       ></i
                     ></a>
                   </div>
                   <div class="mt-20 flex items-center gap-3">
                     <img
-                      alt="logo"
+                      alt="NavaWorks Logo"
                       src="./assets/navaworkslogowhite.svg"
                       class="w-20 h-20"
+                      width="80"
+                      height="80"
                     />
                     <a href="#" class="text-5xl font-bold text-cream">
                       <span class="text-primary">Nava</span>Works
                     </a>
                   </div>
                 </div>
-                <!-- <div class="pt-8 border-t border-white/5">
-<p class="text-sm text-white/40 font-bold uppercase tracking-widest mb-2">Office</p>
-<p class="text-cream/80">99 Creative Ave, Design District<br/>San Francisco, CA 94103</p>
-</div> -->
               </div>
             </div>
             <form
               id="contactForm"
               class="space-y-6 bg-white/5 p-6 md:p-12 rounded-custom border border-white/10 backdrop-blur-sm shadow-2xl"
+              aria-label="Contact form"
             >
               <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div class="space-y-2">
                   <label
+                    for="from_name"
                     class="text-xs font-black uppercase tracking-widest text-cream/40"
                     >Full Name</label
                   >
                   <input
+                    id="from_name"
                     name="from_name"
                     class="w-full bg-white/5 border-white/10 rounded-custom py-4 px-5 focus:ring-primary focus:border-primary text-white placeholder:text-white/10 transition-all"
                     placeholder="John Doe"
                     type="text"
                     required
+                    autocomplete="name"
                   />
                 </div>
                 <div class="space-y-2">
                   <label
+                    for="reply_to"
                     class="text-xs font-black uppercase tracking-widest text-cream/40"
                     >Email Address</label
                   >
                   <input
+                    id="reply_to"
                     name="reply_to"
                     class="w-full bg-white/5 border-white/10 rounded-custom py-4 px-5 focus:ring-primary focus:border-primary text-white placeholder:text-white/10 transition-all"
                     placeholder="john@example.com"
                     type="email"
                     required
+                    autocomplete="email"
                   />
                 </div>
               </div>
               <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div class="space-y-2">
                   <label
+                    for="phone_number"
                     class="text-xs font-black uppercase tracking-widest text-cream/40"
                     >Phone Number</label
                   >
                   <input
+                    id="phone_number"
                     name="phone_number"
                     class="w-full bg-white/5 border-white/10 rounded-custom py-4 px-5 focus:ring-primary focus:border-primary text-white placeholder:text-white/10 transition-all"
                     placeholder="+977 9800000000"
                     type="tel"
                     required
+                    autocomplete="tel"
                   />
                 </div>
                 <div class="space-y-2">
                   <label
+                    for="inquiry_type"
                     class="text-xs font-black uppercase tracking-widest text-cream/40"
                     >Inquiry Type</label
                   >
                   <select
+                    id="inquiry_type"
                     name="inquiry_type"
                     class="w-full bg-white/5 border-white/10 rounded-custom py-4 px-5 focus:ring-primary focus:border-primary text-white appearance-none transition-all"
                   >
@@ -899,10 +1087,12 @@
               </div>
               <div class="space-y-2">
                 <label
+                  for="message"
                   class="text-xs font-black uppercase tracking-widest text-cream/40"
                   >Project Vision</label
                 >
                 <textarea
+                  id="message"
                   name="message"
                   class="w-full bg-white/5 border-white/10 rounded-custom py-4 px-5 focus:ring-primary focus:border-primary text-white placeholder:text-white/10 transition-all"
                   placeholder="Tell us about your project goals and timeline..."
@@ -918,19 +1108,11 @@
               </button>
             </form>
           </div>
-          <div
+          <footer
             class="mt-32 pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-cream/30 text-xs font-black uppercase tracking-[0.3em]"
           >
             <p>© 2024 NAVAWORKS. ALL RIGHTS RESERVED.</p>
-            <div class="flex gap-12 mt-6 md:mt-0">
-              <!-- <a class="hover:text-primary transition-colors" href="#"
-                >Privacy Policy</a
-              >
-              <a class="hover:text-primary transition-colors" href="#"
-                >Terms of Service</a
-              > -->
-            </div>
-          </div>
+          </footer>
         </div>
       </section>
     </main>
@@ -939,5 +1121,32 @@
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
     ></script>
     <script src="./script.js"></script>
+    <script>
+      // Mobile menu toggle
+      const hamburgerBtn = document.getElementById('hamburger-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
+      
+      hamburgerBtn.addEventListener('click', () => {
+        hamburgerBtn.classList.toggle('active');
+        mobileMenu.classList.toggle('active');
+      });
+      
+      // Close menu when clicking on a link
+      mobileMenuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          hamburgerBtn.classList.remove('active');
+          mobileMenu.classList.remove('active');
+        });
+      });
+      
+      // Close menu when clicking outside
+      document.addEventListener('click', (e) => {
+        if (!mobileMenu.contains(e.target) && !hamburgerBtn.contains(e.target)) {
+          hamburgerBtn.classList.remove('active');
+          mobileMenu.classList.remove('active');
+        }
+      });
+    </script>
   </body>
 </html>
